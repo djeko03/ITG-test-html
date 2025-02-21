@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="zeroing.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SimpleOne</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a class="header__logo">
+                <img src="images/Logo.png" alt="#" class="logo__image logo">
+            </a>
+            <button class="header__button"></button>
+            <div class="header__inner">
+                <form class="header__search search" action="#">
+                    <input class="header__search-input search__input" type="search" placeholder="Поиск">
+                    <button class="search__button">
+                        <img src="images/Padding.png" alt="#">
+                    </button>
+                </form>
+                <div class="header__person">
+                    <img src="images/Avatar.png" alt="#" class="person__avatar">
+                    <p class="person__name">Максим Галактионов</p>
+                </div>
+                <button class="header__settings">
+                    <img src="images/settings.png" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper container">
+        <section id="modal" class="modal">
+            <div id="modalShadow" class="modal__shadow"></div>
+            <div class="modal__container">
+                <section class="modal__head flex">
+                    <div class="modal__head-left flex">
+                        <h2 class="modal__head-title">Подзадача</h2>
+                    </div>
+                    <div class="modal__buttons flex">
+                        <button class="button button--blue">Сохранить</button>
+                        <button id="closeModalX" class="main__head-right-last button button--white">Отменить</button>
+                    </div>
+                    <button id="closeModal" class="modal__close"></button>
+                </section>
+                <ul class="content-list flex">
+                    <li class="content-item">
+                        <div class="flex">
+                            <img class="main__content-redstar" src="images/redstar.png" alt="">
+                            <p class="main__content-title">Тема</p>
+                        </div>
+                        <input class="main__content-input" type="text" value="На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller">
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Статус</p>
+                        <input class="main__content-input" type="text" value="Новая">
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Описание</p>
+                        <input class="main__content-input" type="text">
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Продукт</p>
+                        <div class="flex">
+                            <input class="main__content-input" type="text" value="Paltform">
+                            <button class="main__content-search"></button>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <div class="flex">
+                            <img class="main__content-redstar" src="images/redstar.png" alt="">
+                            <p class="main__content-title">Рабочие заметки</p>
+                        </div>
+                        <input class="main__content-input" type="text" value="Проверить ACL id=172830402014193655">
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Приоритет</p>
+                        <input class="main__content-input" type="text" value="Средний">
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Ответственный</p>
+                        <div>
+                            <div class="flex">
+                                <div class="main__content-input">
+                                    <div class="main__content-persons">
+                                        <div class="main__content-person">Константин Константинопольский</div>
+                                    </div>
+                                    <button class="main__content-delete"></button>
+                                </div>
+                                <button class="main__content-add"></button>
+                                <button class="main__content-search"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Группа</p>
+                        <div class="flex">
+                            <div class="main__content-input">
+                                <div class="main__content-persons">
+                                    <div class="main__content-person">Support Group</div>
+                                </div>
+                                <button class="main__content-delete"></button>
+                            </div>
+                            <button class="main__content-add"></button>
+                            <button class="main__content-search"></button>
+                        </div>
+                    </li>
+                    <li class="content-item content-item--big">
+                        <p class="main__content-title">Комментарий</p>
+                        <input class="main__content-input" type="text">
+                    </li>
+                    <li class="content-item content-item--big">
+                        <p class="main__content-title">Согласующие</p>
+                        <div class="flex">
+                            <div class="main__content-input">
+                                <div class="main__content-persons">
+                                    <div class="main__content-person"> 
+                                        <p class="main__content-person-name">Андрей Пивоваров</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Максим Галактионов</p> 
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Алла Лин </p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Константин Константинопольский Константинович</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Игорь Иванченко</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Юлия Эйчаровна</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Артём Подпрыгайко-Саппортов</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Илья Вазнец</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Михаил Вортенов</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Наталья Нашевна</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Евгения Итамовна</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                    <div class="main__content-person">
+                                        <p class="main__content-person-name">Алиса Киральчук</p>
+                                        <button class="main__content-close"></button>
+                                    </div>
+                                </div>
+                                <button class="main__content-delete"></button>
+                            </div>
+                            <button class="main__content-add"></button>
+                            <button class="main__content-search"></button>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Когда открыто</p>
+                        <div class="flex">
+                            <input id="opened" class="main__content-input input-empty" type="date" value="">
+                            <label for="opened">
+                                <div class="main__content-input-img"></div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Когда создано</p>
+                        <div class="flex">
+                            <input id="created" class="main__content-input" type="date" value="2024-10-22">
+                            <label for="created">
+                                <div class="main__content-input-img"></div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Кем открыто</p>
+                        <div class="flex">
+                            <div class="main__content-input">
+                                <div class="main__content-persons">
+                                    <div class="main__content-person">Андрей Пивоваров</div>
+                                </div>
+                                <button class="main__content-delete"></button>
+                            </div>
+                            <button class="main__content-add"></button>
+                            <button class="main__content-search"></button>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <p class="main__content-title">Кем создано</p>
+                        <div class="flex">
+                            <div class="main__content-input">
+                                <div class="main__content-persons">
+                                    <div class="main__content-person">Андрей Пивоваров</div>
+                                </div>
+                                <button class="main__content-delete"></button>
+                            </div>
+                            <button class="main__content-add"></button>
+                            <button class="main__content-search"></button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="modal__footer">
+                    <button class="button button--blue">Сохранить</button>
+                    <button id="footerButton" class="button button--white">Отменить</button>
+                </div>
+        </section>
+
+        <div class="menu">
+            <div class="menu__buttons">
+                <button class="menu__button">
+                    <img src="images/sidebar1.png" alt="">
+                </button>
+                <button class="menu__button">
+                    <img src="images/star.png" alt="">
+                </button>
+            </div>
+            <nav class="menu__nav">
+                <form class="menu__search search" action="#">
+                    <input class=" search__input" type="search" placeholder="Поиск">
+                    <button class="search__button">
+                        <img src="images/Padding.png" alt="#">
+                    </button>
+                    <button class="menu__search-button">
+                        <img src="images/no-pin.png" alt="no-pin">
+                    </button>
+                </form>
+                <ul class="menu__nav-list">
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Моя работа</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Структура портала</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Личное расписание</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Отсутствие на рабочем месте</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Портфель услуг</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Дашборды</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Доски задач</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Обращения</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">События</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Инциденты</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Проблемы</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Настройка каталогов</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Запросы на обслуживание</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Запросы на изменения</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Управление конфигурациями</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Управление уровнем услуг</a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="" class="menu__nav-link">Настройка соответствий</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="main">
+            <section class="main__head flex">
+                <div class="main__head-left flex">
+                    <h2 class="main__head-title">Подзадача</h2>
+                    <button id="createBtn" class="button button--white">Создать</button>
+                </div>
+                <div class="main__head-right flex">
+                    <button class="button button--blue">Сохранить</button>
+                    <button class="main__head-right-last button button--white">Сохранить и выйти</button>
+                </div>
+            </section>
+            <h1 class="main__title">STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller</h1>
+            <section class="main__content">
+                    <ul class="content-list flex">
+                        <li class="content-item">
+                            <div class="flex">
+                                <img class="main__content-redstar" src="images/redstar.png" alt="">
+                                <p class="main__content-title">Тема</p>
+                            </div>
+                            <input class="main__content-input" type="text" value="На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller">
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Статус</p>
+                            <input class="main__content-input" type="text" value="Новая">
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Описание</p>
+                            <input class="main__content-input" type="text">
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Продукт</p>
+                            <div class="flex">
+                                <input class="main__content-input" type="text" value="Paltform">
+                                <button class="main__content-search"></button>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <div class="flex">
+                                <img class="main__content-redstar" src="images/redstar.png" alt="">
+                                <p class="main__content-title">Рабочие заметки</p>
+                            </div>
+                            <input class="main__content-input" type="text" value="Проверить ACL id=172830402014193655">
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Приоритет</p>
+                            <input class="main__content-input" type="text" value="Средний">
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Ответственный</p>
+                            <div>
+                                <div class="flex">
+                                    <div class="main__content-input">
+                                        <div class="main__content-persons">
+                                            <div class="main__content-person">Константин Константинопольский</div>
+                                        </div>
+                                        <button class="main__content-delete"></button>
+                                    </div>
+                                    <button class="main__content-add"></button>
+                                    <button class="main__content-search"></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Группа</p>
+                            <div class="flex">
+                                <div class="main__content-input">
+                                    <div class="main__content-persons">
+                                        <div class="main__content-person">Support Group</div>
+                                    </div>
+                                    <button class="main__content-delete"></button>
+                                </div>
+                                <button class="main__content-add"></button>
+                                <button class="main__content-search"></button>
+                            </div>
+                        </li>
+                        <li class="content-item content-item--big">
+                            <p class="main__content-title">Комментарий</p>
+                            <input class="main__content-input" type="text">
+                        </li>
+                        <li class="content-item content-item--big">
+                            <p class="main__content-title">Согласующие</p>
+                            <div class="flex">
+                                <div class="main__content-input">
+                                    <div class="main__content-persons">
+                                        <div class="main__content-person"> 
+                                            <p class="main__content-person-name">Андрей Пивоваров</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Максим Галактионов</p> 
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Алла Лин </p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Константин Константинопольский Константинович</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+    
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Игорь Иванченко</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Юлия Эйчаровна</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Артём Подпрыгайко-Саппортов</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Илья Вазнец</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Михаил Вортенов</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Наталья Нашевна</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Евгения Итамовна</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                        <div class="main__content-person">
+                                            <p class="main__content-person-name">Алиса Киральчук</p>
+                                            <button class="main__content-close"></button>
+                                        </div>
+                                    </div>
+                                    <button class="main__content-delete"></button>
+                                </div>
+                                <button class="main__content-add"></button>
+                                <button class="main__content-search"></button>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Когда открыто</p>
+                            <div class="flex">
+                                <input id="opened" class="main__content-input input-empty" type="date" value="">
+                                <label for="opened">
+                                    <div class="main__content-input-img"></div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Когда создано</p>
+                            <div class="flex">
+                                <input id="created" class="main__content-input" type="date" value="2024-10-22">
+                                <label for="created">
+                                    <div class="main__content-input-img"></div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Кем открыто</p>
+                            <div class="flex">
+                                <div class="main__content-input">
+                                    <div class="main__content-persons">
+                                        <div class="main__content-person">Андрей Пивоваров</div>
+                                    </div>
+                                    <button class="main__content-delete"></button>
+                                </div>
+                                <button class="main__content-add"></button>
+                                <button class="main__content-search"></button>
+                            </div>
+                        </li>
+                        <li class="content-item">
+                            <p class="main__content-title">Кем создано</p>
+                            <div class="flex">
+                                <div class="main__content-input">
+                                    <div class="main__content-persons">
+                                        <div class="main__content-person">Андрей Пивоваров</div>
+                                    </div>
+                                    <button class="main__content-delete"></button>
+                                </div>
+                                <button class="main__content-add"></button>
+                                <button class="main__content-search"></button>
+                            </div>
+                        </li>
+                    </ul>
+            </section>
+
+
+
+
+        </main>
+    </div>
+    
+<script src="app.js"></script>
+</body>
+</html>
